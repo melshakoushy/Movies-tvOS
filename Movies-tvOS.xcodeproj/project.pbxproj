@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		88FC44DF2500EB9200FBC621 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FC44DE2500EB9200FBC621 /* AppDelegate.swift */; };
-		88FC44E12500EB9200FBC621 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FC44E02500EB9200FBC621 /* ViewController.swift */; };
+		88FC44E12500EB9200FBC621 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FC44E02500EB9200FBC621 /* MainVC.swift */; };
 		88FC44E42500EB9200FBC621 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88FC44E22500EB9200FBC621 /* Main.storyboard */; };
 		88FC44E62500EB9600FBC621 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88FC44E52500EB9600FBC621 /* Assets.xcassets */; };
 		88FC44E92500EB9600FBC621 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88FC44E72500EB9600FBC621 /* LaunchScreen.storyboard */; };
+		88FC44F72500F08F00FBC621 /* MainVC+CollectionVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FC44F62500F08F00FBC621 /* MainVC+CollectionVIew.swift */; };
+		88FC44FB2500F53200FBC621 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FC44F92500F53200FBC621 /* MovieCell.swift */; };
+		88FC44FC2500F53200FBC621 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88FC44FA2500F53200FBC621 /* MovieCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		88FC44DB2500EB9200FBC621 /* Movies-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movies-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88FC44DE2500EB9200FBC621 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		88FC44E02500EB9200FBC621 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		88FC44E02500EB9200FBC621 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		88FC44E32500EB9200FBC621 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88FC44E52500EB9600FBC621 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88FC44E82500EB9600FBC621 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88FC44EA2500EB9600FBC621 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88FC44F62500F08F00FBC621 /* MainVC+CollectionVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+CollectionVIew.swift"; sourceTree = "<group>"; };
+		88FC44F92500F53200FBC621 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		88FC44FA2500F53200FBC621 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,73 @@
 		88FC44DD2500EB9200FBC621 /* Movies-tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				88FC44DE2500EB9200FBC621 /* AppDelegate.swift */,
-				88FC44E02500EB9200FBC621 /* ViewController.swift */,
-				88FC44E22500EB9200FBC621 /* Main.storyboard */,
-				88FC44E52500EB9600FBC621 /* Assets.xcassets */,
-				88FC44E72500EB9600FBC621 /* LaunchScreen.storyboard */,
-				88FC44EA2500EB9600FBC621 /* Info.plist */,
+				88FC44F32500EFAC00FBC621 /* Configurations */,
+				88FC44F02500EF8700FBC621 /* Core */,
+				88FC44F12500EF9300FBC621 /* Resources */,
+				88FC44F22500EF9E00FBC621 /* StoryBoards */,
+				88FC44F42500EFC400FBC621 /* Controller */,
 			);
 			path = "Movies-tvOS";
+			sourceTree = "<group>";
+		};
+		88FC44F02500EF8700FBC621 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				88FC44DE2500EB9200FBC621 /* AppDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		88FC44F12500EF9300FBC621 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				88FC44E52500EB9600FBC621 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		88FC44F22500EF9E00FBC621 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				88FC44E72500EB9600FBC621 /* LaunchScreen.storyboard */,
+				88FC44E22500EB9200FBC621 /* Main.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		88FC44F32500EFAC00FBC621 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				88FC44EA2500EB9600FBC621 /* Info.plist */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		88FC44F42500EFC400FBC621 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				88FC44F52500EFDE00FBC621 /* MainVC */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		88FC44F52500EFDE00FBC621 /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				88FC44E02500EB9200FBC621 /* MainVC.swift */,
+				88FC44F62500F08F00FBC621 /* MainVC+CollectionVIew.swift */,
+				88FC44F82500F35400FBC621 /* MovieCell */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		88FC44F82500F35400FBC621 /* MovieCell */ = {
+			isa = PBXGroup;
+			children = (
+				88FC44F92500F53200FBC621 /* MovieCell.swift */,
+				88FC44FA2500F53200FBC621 /* MovieCell.xib */,
+			);
+			path = MovieCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +189,7 @@
 			files = (
 				88FC44E92500EB9600FBC621 /* LaunchScreen.storyboard in Resources */,
 				88FC44E62500EB9600FBC621 /* Assets.xcassets in Resources */,
+				88FC44FC2500F53200FBC621 /* MovieCell.xib in Resources */,
 				88FC44E42500EB9200FBC621 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,7 +201,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88FC44E12500EB9200FBC621 /* ViewController.swift in Sources */,
+				88FC44F72500F08F00FBC621 /* MainVC+CollectionVIew.swift in Sources */,
+				88FC44E12500EB9200FBC621 /* MainVC.swift in Sources */,
+				88FC44FB2500F53200FBC621 /* MovieCell.swift in Sources */,
 				88FC44DF2500EB9200FBC621 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,7 +349,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Movies-tvOS/Info.plist";
+				DEVELOPMENT_TEAM = 45S7VN2TT3;
+				INFOPLIST_FILE = "Movies-tvOS/Configurations/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +367,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Movies-tvOS/Info.plist";
+				DEVELOPMENT_TEAM = 45S7VN2TT3;
+				INFOPLIST_FILE = "Movies-tvOS/Configurations/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="appleTV" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCell" id="Rz2-K0-ksD" customClass="MovieCell" customModule="Movies_tvOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="465" height="740"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="465" height="740"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="71niXI3lxlL._AC_SY679_" translatesAutoresizingMaskIntoConstraints="NO" id="Zx1-6D-ebD">
+                        <rect key="frame" x="16" y="32" width="433" height="600"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="600" id="EPZ-At-7eI"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avengers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1I-RC-ci8">
+                        <rect key="frame" x="16" y="648" width="433" height="46"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Zx1-6D-ebD" firstAttribute="leading" secondItem="Rz2-K0-ksD" secondAttribute="leading" constant="16" id="RJW-uh-hha"/>
+                <constraint firstAttribute="trailing" secondItem="B1I-RC-ci8" secondAttribute="trailing" constant="16" id="myD-Sv-jxN"/>
+                <constraint firstItem="Zx1-6D-ebD" firstAttribute="top" secondItem="Rz2-K0-ksD" secondAttribute="top" constant="32" id="nLC-4h-jMx"/>
+                <constraint firstItem="B1I-RC-ci8" firstAttribute="leading" secondItem="Rz2-K0-ksD" secondAttribute="leading" constant="16" id="oSS-5Y-Ka6"/>
+                <constraint firstAttribute="trailing" secondItem="Zx1-6D-ebD" secondAttribute="trailing" constant="16" id="pOp-cA-LsT"/>
+                <constraint firstItem="B1I-RC-ci8" firstAttribute="top" secondItem="Zx1-6D-ebD" secondAttribute="bottom" constant="16" id="urV-Mg-huo"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="7PP-Ag-gPX"/>
+            <size key="customSize" width="465" height="738"/>
+            <connections>
+                <outlet property="movieImg" destination="Zx1-6D-ebD" id="HZY-nc-YVe"/>
+                <outlet property="movieTitle" destination="B1I-RC-ci8" id="pgL-C4-xD3"/>
+            </connections>
+            <point key="canvasLocation" x="258.5" y="447"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="71niXI3lxlL._AC_SY679_" width="459" height="679"/>
+    </resources>
+</document>
