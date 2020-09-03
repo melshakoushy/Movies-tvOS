@@ -20,9 +20,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="B3r-O9-yzU">
-                                <rect key="frame" x="90" y="60" width="1740" height="960"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KjO-ry-P5k">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KjO-ry-P5k">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -33,10 +33,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="B3r-O9-yzU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Ebj-da-XzR"/>
-                            <constraint firstItem="B3r-O9-yzU" firstAttribute="leading" secondItem="wu6-TO-1qx" secondAttribute="leading" id="Xky-G2-6WR"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="B3r-O9-yzU" secondAttribute="bottom" id="eNX-bx-flz"/>
-                            <constraint firstItem="wu6-TO-1qx" firstAttribute="trailing" secondItem="B3r-O9-yzU" secondAttribute="trailing" id="yS8-ne-aZQ"/>
+                            <constraint firstItem="B3r-O9-yzU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ebj-da-XzR"/>
+                            <constraint firstItem="B3r-O9-yzU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Xky-G2-6WR"/>
+                            <constraint firstAttribute="bottom" secondItem="B3r-O9-yzU" secondAttribute="bottom" id="eNX-bx-flz"/>
+                            <constraint firstAttribute="trailing" secondItem="B3r-O9-yzU" secondAttribute="trailing" id="yS8-ne-aZQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
                     </view>

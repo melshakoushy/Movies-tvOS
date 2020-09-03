@@ -14,5 +14,24 @@ class MovieCell: UICollectionViewCell {
     @IBOutlet weak var movieImg: UIImageView!
     @IBOutlet weak var movieTitle: UILabel!
     
-    
+    func configureCell(movie: Movie) {
+        if let title = movie.title {
+            movieTitle.text = title
+        }
+        if let path = movie.posterPath {
+            let url = URL(string: path)!
+            DispatchQueue.global(qos: .background).async {
+                DispatchQueue.main.async {
+                    do {
+                        let data = try Data(contentsOf: url)
+                        let img = UIImage(data: data)
+                        self.movieImg.image = img
+                    } catch {
+                        
+                    }
+
+                }
+            }
+        }
+    }
 }

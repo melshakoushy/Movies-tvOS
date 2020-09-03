@@ -15,6 +15,8 @@
 		88FC44F72500F08F00FBC621 /* MainVC+CollectionVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FC44F62500F08F00FBC621 /* MainVC+CollectionVIew.swift */; };
 		88FC44FB2500F53200FBC621 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FC44F92500F53200FBC621 /* MovieCell.swift */; };
 		88FC44FC2500F53200FBC621 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88FC44FA2500F53200FBC621 /* MovieCell.xib */; };
+		88FC44FF250110B600FBC621 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FC44FE250110B600FBC621 /* Constants.swift */; };
+		88FC4502250118F100FBC621 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FC4501250118F100FBC621 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		88FC44F62500F08F00FBC621 /* MainVC+CollectionVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+CollectionVIew.swift"; sourceTree = "<group>"; };
 		88FC44F92500F53200FBC621 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		88FC44FA2500F53200FBC621 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
+		88FC44FE250110B600FBC621 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		88FC4501250118F100FBC621 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +66,9 @@
 			children = (
 				88FC44F32500EFAC00FBC621 /* Configurations */,
 				88FC44F02500EF8700FBC621 /* Core */,
+				88FC44FD250110A100FBC621 /* Utililites */,
 				88FC44F12500EF9300FBC621 /* Resources */,
+				88FC4500250118E000FBC621 /* Model */,
 				88FC44F22500EF9E00FBC621 /* StoryBoards */,
 				88FC44F42500EFC400FBC621 /* Controller */,
 			);
@@ -127,6 +133,22 @@
 				88FC44FA2500F53200FBC621 /* MovieCell.xib */,
 			);
 			path = MovieCell;
+			sourceTree = "<group>";
+		};
+		88FC44FD250110A100FBC621 /* Utililites */ = {
+			isa = PBXGroup;
+			children = (
+				88FC44FE250110B600FBC621 /* Constants.swift */,
+			);
+			path = Utililites;
+			sourceTree = "<group>";
+		};
+		88FC4500250118E000FBC621 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88FC4501250118F100FBC621 /* Movie.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,7 +223,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88FC44FF250110B600FBC621 /* Constants.swift in Sources */,
 				88FC44F72500F08F00FBC621 /* MainVC+CollectionVIew.swift in Sources */,
+				88FC4502250118F100FBC621 /* Movie.swift in Sources */,
 				88FC44E12500EB9200FBC621 /* MainVC.swift in Sources */,
 				88FC44FB2500F53200FBC621 /* MovieCell.swift in Sources */,
 				88FC44DF2500EB9200FBC621 /* AppDelegate.swift in Sources */,

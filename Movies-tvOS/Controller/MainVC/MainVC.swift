@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class MainVC: UIViewController {
     
@@ -15,6 +16,9 @@ class MainVC: UIViewController {
     
     // MARK: Constants
     let movieCell = "MovieCell"
+    
+    //MARK: Variables
+    var movies = [Movie]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +33,32 @@ class MainVC: UIViewController {
     }
     
     func downloadData() {
-        
+        let url = URL(string: BASE_URL)!
+        let request = URLRequest(url: url)
+        let session = URLSession.shared
+        let task = session.dataTask(with: request) { (data, response, error) in
+            if error != nil {
+                print(error.debugDescription)
+            } else {
+                do {
+                    let dict = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? Dictionary<String, AnyObject>
+                    if let results = dict!["results"] as? [Dictionary<String, AnyObject>] {
+                        for obj in results {
+                            let movie = Movie(movieDict: obj)
+                            self.movies.append(movie)
+                        }
+                        DispatchQueue.global(qos: .background).async {
+                            DispatchQueue.main.async {
+                                self.moviesCollectionView.reloadData()
+                            }
+                        }
+                    }
+                } catch {
+                    
+                }
+            }
+        }
+        task.resume()
     }
 }
 
